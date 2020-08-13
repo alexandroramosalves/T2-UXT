@@ -15,35 +15,17 @@
 			if(!file_exists('Samples/'.$Sample)){
 				mkdir('Samples/'.$Sample);
 			}else{
-				if(!file_exists('Samples/'.$Sample.'/'.$metadata->userId)){
-					mkdir('Samples/'.$Sample.'/'.$metadata->userId);
+				if(!file_exists('Samples/'.$metadata->userId.'/'.$Sample)){
+					mkdir('Samples/'.$metadata->userId.'/'.$Sample);
 				}
 			}
 		}
-		if($data->imageData != "NO")
-		{
-			if(!(file_exists('Samples/'.$Sample.'/'.$metadata->userId.'/'.$data->imageName)))
-			{
-				$imageData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $data->imageData));
-				$source = imagecreatefromstring($imageData);
-				$imageSave = imagejpeg($source,'Samples/'.$Sample.'/'.$metadata->userId.'/'.$data->imageName,100);
-				imagedestroy($source);
-			}
-		}
-		//if($metadata->type=="eye"){
-		//	$txt = $data->X;
-		//	file_put_contents('Samples/'.$Sample.'/'.$metadata->userId.'/traceX.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-		//	$txt = $data->Y;
-		//	file_put_contents('Samples/'.$Sample.'/'.$metadata->userId.'/traceY.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-		//	$txt = $metadata->time;
-		//	file_put_contents('Samples/'.$Sample.'/'.$metadata->userId.'/traceTime.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-		//}else{
-			$txt = "<rawtrace type=\"".$metadata->type."\" image=\"".$data->imageName."\" time=\"".$metadata->time."\" Class=\"".$data->Class."\" Id=\"".$data->Id."\" MouseClass=\"".$data->mouseClass."\" MouseId=\"".$data->mouseId."\" X=\"".$data->X."\" Y=\"".$data->Y."\" keys=\"".$data->Typed."\" scroll=\"".$metadata->scroll."\" height=\"".$metadata->height."\" url=\"".$metadata->url."\" />";
-			file_put_contents('Samples/'.$Sample.'/'.$metadata->userId.'/trace.xml', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-			$handle = fopen('Samples/'.$Sample.'/'.$metadata->userId.'/lastTime.txt',"w");
+
+			$txt = "<rawtrace type=\"".$metadata->type."\" time=\"".$metadata->time."\" Class=\"".$data->Class."\" Id=\"".$data->Id."\" MouseClass=\"".$data->mouseClass."\" MouseId=\"".$data->mouseId."\" X=\"".$data->X."\" Y=\"".$data->Y."\" keys=\"".$data->Typed."\" scroll=\"".$metadata->scroll."\" height=\"".$metadata->height."\" url=\"".$metadata->url."\" />";
+			file_put_contents('Samples/'.$metadata->userId.'/'.$Sample.'/trace.xml', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+			$handle = fopen('Samples/'.$metadata->userId.'/'.$Sample.'/lastTime.txt',"w");
 			$content = fwrite($handle,$metadata->time);
 			fclose($handle);
 		
 		echo "received ";
 	}
- ?>
