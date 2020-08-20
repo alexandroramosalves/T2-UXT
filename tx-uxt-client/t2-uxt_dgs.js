@@ -16,8 +16,7 @@ function onMessage(request) {
 }
 var shot = 5;
 function capture(type, data) {
-    var url = new URL(tab.url);
-    domain = url.hostname;
+    domain = window.location.hostname;
     //if(lastTime == (Math.ceil(data.Time) + timeInternal)&& ((type=="move" || type=="freeze") && //Math.ceil(data.Time) % 3 == 1)){
     //    data.imageData = "";
     //}
@@ -76,7 +75,7 @@ function getRandomToken() {
 }
 
 function prepareSample() {
-    let items = Window.localStorage.getItem("userid");
+    let items = localStorage.getItem("userid");
     var loadedId = items.userid;
     function useToken(userid) {
         userId = userid;
@@ -91,7 +90,7 @@ function prepareSample() {
     }
     else {
         loadedId = getRandomToken();
-        Window.localStorage.setItem('userid', loadedId);
+        localStorage.setItem('userid', loadedId);
         useToken(loadedId);
     }
 }
@@ -103,7 +102,7 @@ function init() {
 }
 
 function clean() {
-    window.localStorage.removeItem("userid");
+    localStorage.removeItem("userid");
     alert('Data Cleaned.');
 }
 

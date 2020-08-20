@@ -10442,7 +10442,7 @@ if (typeof exports !== 'undefined') {
      * 
      */
     function loadGlobalData() {
-        var storage = JSON.parse(window.localStorage.getItem(localstorageLabel)) || defaults;
+        var storage = JSON.parse(localStorage.getItem(localstorageLabel)) || defaults;
         settings = storage.settings;
         data = storage.data;
         for (var reg in regs) {
@@ -10458,7 +10458,7 @@ if (typeof exports !== 'undefined') {
             'settings': settings,
             'data': regs[0].getData() || data
         };
-        window.localStorage.setItem(localstorageLabel, JSON.stringify(storage));
+        localStorage.setItem(localstorageLabel, JSON.stringify(storage));
         //TODO data should probably be stored in webgazer object instead of each regression model
         //     -> requires duplication of data, but is likely easier on regression model implementors
     }
@@ -10467,7 +10467,7 @@ if (typeof exports !== 'undefined') {
      * clears data from model and global storage
      */
     function clearData() {
-        window.localStorage.set(localstorageLabel, undefined);
+        localStorage.set(localstorageLabel, undefined);
         for (var reg in regs) {
             regs[reg].setData([]);
         }

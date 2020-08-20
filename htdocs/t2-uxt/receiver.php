@@ -1,4 +1,5 @@
 <?php
+ header("Access-Control-Allow-Origin: *");
  	 function clean($string) {
 	   $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
 
