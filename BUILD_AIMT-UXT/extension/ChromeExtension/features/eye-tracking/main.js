@@ -26,7 +26,7 @@
         .begin()
         
 
-        .showPredictionPoints(true); /* shows a square every 100 milliseconds where current prediction is */
+        .showPredictionPoints(false); /* shows a square every 100 milliseconds where current prediction is */
         
         var width = 320;
         var height = 240;
@@ -51,7 +51,7 @@
 
         function checkIfReady() {
             if (webgazer.isReady()) {
-                setup();
+                //setup();
             } else {
                 setTimeout(checkIfReady, 200);
             }
@@ -93,8 +93,6 @@ a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':')
 e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
 a.dispatchEvent(e)
 }
-
-window.saveDataAcrossSessions=true;
 
 document.onkeyup=function(e){
 if(e.which == 27){

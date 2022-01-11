@@ -1,26 +1,41 @@
 {
-  "name": "AIMT-UXT Client",
-  "version": "2.0",
+  "name": "T2-UXT Client",
+  "version": "3.0",
   "description": "Software de captura de dados de interacao.",
   "background": {
     "persistent": false,
-    "scripts": ["jquery-3.4.1.min.js","background.js" ]
+    "scripts": [
+      "adapter/adapter.js",
+      "service/BackgroundService.js"
+    ]
   },
   "content_scripts": [
     {
-      "matches": [ "<all_urls>", "http://*/*", "https://*/*" ],
-      "exclude_globs": [
-          "http://*/webtracer/calibra_webgazer_*",
-          "https://*/webtracer/calibra_webgazer_*",
-          "http://localhost/webtracer/calibra_webgazer_*",
-          "https://localhost/webtracer/calibra_webgazer_*"
+      "matches": [
+        "<all_urls>",
+        "http://*/*",
+        "https://*/*"
       ],
-      "js": ["jquery-3.4.1.min.js","searchgazer.js","main.js","content.js"]
+      "exclude_globs": [
+        "http://*/webtracer/calibra_webgazer_*",
+        "https://*/webtracer/calibra_webgazer_*",
+        "http://localhost/webtracer/calibra_webgazer_*",
+        "https://localhost/webtracer/calibra_webgazer_*"
+      ],
+      "js": [
+        "service/FrontService.js",
+        "features/mouse-tracking/mouse-tracking.js",
+        "features/eye-tracking/eye-tracking.js",
+        "features/eye-tracking/webgazer.js",
+        "features/eye-tracking/main.js",
+        "features/voice-recognition/speech.js",
+        "features/keylogging/keylogging.js"
+      ]
     }
   ],
   "browser_action": {
     "default_icon": "logo.png",
-    "default_title": "AIMT-UXT Client"
+    "default_title": "T2-UXT Client"
   },
   "permissions": [
     "storage",
