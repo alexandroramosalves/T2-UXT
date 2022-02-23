@@ -17,6 +17,7 @@ Repositório destinado a abrigar o código-fonte de todas as aplicações relaci
 * * * [Reprodução de sessão](#reproducao-de-sessao)
 * * * [Rastreamento ocular](#rastreamento-ocular)
 * * * [Análise de métricas](#analise-de-metricas)
+* * * [Download do estudo](#download-do-estudo)
 *  [Tecnologias](#tecnologias)
 
  ## Pré-requisitos
