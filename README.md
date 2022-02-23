@@ -60,3 +60,12 @@ Este componente gera uma planilha que consolida os valores das métricas utiliza
 * [.NET 5](https://docs.microsoft.com/pt-br/dotnet/)
 * [JavaScript](https://www.javascript.com/)
 * [PHP](https://php.net/)
+
+##DOWNLOAD RESEARCH
+
+The procedure:
+1 - Access the link -> https://t2uxtweb.azurewebsites.net/downloadresearch.php
+2 - Click on the "Create Zip" button
+3 - Click on the "Download" button
+
+After the steps above, the download of the zip from the Samples folder will start.
