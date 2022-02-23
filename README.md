@@ -56,11 +56,11 @@ Este componente produz um mapa de calor para o rastreamento do mouse e do olho. 
 #### Análise de métricas
 Este componente gera uma planilha que consolida os valores das métricas utilizadas na captura das interações dos desenvolvedores. A tabela gerada pode ser exportada para utilização em outras ferramentas como, por exemplo, modelos de inteligência artificial e de classificação. 
 #### Download do estudo
-The procedure:<br/>
-1º - Access the link -> https://t2uxtweb.azurewebsites.net/downloadresearch.php <br/>
-2º - Click on the "Create Zip" button <br/>
-3º - Click on the "Download" button <br/>
-After the steps above, the download of the zip from the Samples folder will start. <br/>
+O procedimento:<br/>
+1º - Acesse o link -> https://t2uxtweb.azurewebsites.net/downloadresearch.php <br/>
+2º - Clique no botão "Criar Zip" <br/>
+3º - Clique no botão "Download" <br/>
+Após os passos acima, o download do zip da pasta Samples será iniciado. <br/>
 ## Tecnologias
 * [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 * [.NET 5](https://docs.microsoft.com/pt-br/dotnet/)
