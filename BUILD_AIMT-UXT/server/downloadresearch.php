@@ -76,12 +76,12 @@ if(isset($_POST['download'])){
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>How to create and download a Zip file using PHP</title> 
+      <title>Create and Download a Zip file of the Research</title> 
       <link href='./style.css' rel='stylesheet' type='text/css'> 
     </head>
     <body>
         <div class='container'>
-            <h1>Create and Download Zip file using PHP</h1>
+            <h1>Create and Download a Zip file of the Research</h1>
         <form method='post' action=''>
             <input type='submit' name='create' value='Create Zip' />&nbsp;
             <input type='submit' name='download' value='Download' />
