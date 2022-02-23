@@ -56,7 +56,7 @@ Este componente produz um mapa de calor para o rastreamento do mouse e do olho. 
 #### Análise de métricas
 Este componente gera uma planilha que consolida os valores das métricas utilizadas na captura das interações dos desenvolvedores. A tabela gerada pode ser exportada para utilização em outras ferramentas como, por exemplo, modelos de inteligência artificial e de classificação. 
 #### Download do estudo
-The procedure:
+The procedure:<br/>
 1º - Access the link -> https://t2uxtweb.azurewebsites.net/downloadresearch.php <br/>
 2º - Click on the "Create Zip" button <br/>
 3º - Click on the "Download" button <br/>
