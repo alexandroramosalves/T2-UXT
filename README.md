@@ -1,3 +1,6 @@
+# AIMT-UXT
+Conjunto de aplicações desenvolvidas para realizar a captura e análise de dados de interação entre usuários e interfaces web.
+
    
   ![Badge](https://img.shields.io/badge/PHP-7.0-information?style=flat&logo=PHP&logoColor=white&color=777BB4![Badge])  ![Badge](https://img.shields.io/badge/framework-%204.5.2-information?style=flat&logo=.NET&logoColor=white&color=512BD4)  ![Badge](https://img.shields.io/badge/%20-5.0-information?style=flat&logo=.NET&logoColor=white&color=512BD4) ![Badge](https://img.shields.io/badge/VS%20Code-1.60-information?style=flat&logo=Visual-Studio-Code&logoColor=white&color=007ACC)
  # T2-UXT: Tracking Techniques User eXperience Tool
@@ -55,6 +58,12 @@ Este componente, ou submódulo, reproduz individualmente cada amostra capturada,
 Este componente produz um mapa de calor para o rastreamento do mouse e do olho. É possível a geração de mapas individuais ou de grupo de desenvolvedores. As representações são constituídas de capturas de tela sobrepostas e encontradas nos dados capturados, de forma a reproduzir a tela da aplicação. Este componente permite a detecção de áreas de interesse, desvios de atenção, zonas não visualizadas, entre outras possibilidades.
 #### Análise de métricas
 Este componente gera uma planilha que consolida os valores das métricas utilizadas na captura das interações dos desenvolvedores. A tabela gerada pode ser exportada para utilização em outras ferramentas como, por exemplo, modelos de inteligência artificial e de classificação. 
+#### Download do estudo
+The procedure:
+1 - Access the link -> https://t2uxtweb.azurewebsites.net/downloadresearch.php
+2 - Click on the "Create Zip" button
+3 - Click on the "Download" button
+After the steps above, the download of the zip from the Samples folder will start.
 ## Tecnologias
 * [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 * [.NET 5](https://docs.microsoft.com/pt-br/dotnet/)
